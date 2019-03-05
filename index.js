@@ -1,11 +1,11 @@
 'use strict';
-const {Readable} = require('stream');
+const {Readable: ReadableStream} = require('stream');
 const {randomBytes} = require('crypto');
 
 module.exports = (options = {}) => {
 	let producedSize = 0;
 
-	return new Readable({
+	return new ReadableStream({
 		read(readSize) {
 			let shouldEnd = false;
 
