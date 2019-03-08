@@ -1,5 +1,5 @@
 /// <reference types="node"/>
-import {Readable} from 'stream';
+import {Readable as ReadableStream} from 'stream';
 
 export interface Options {
 	/**
@@ -15,4 +15,4 @@ export interface Options {
  *
  * @returns By default, it produces infinite data.
  */
-export default function randomBytesReadableStream(options?: Options): Readable;
+export default function randomBytesReadableStream(options?: Options): ReadableStream;
