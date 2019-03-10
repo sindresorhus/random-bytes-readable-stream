@@ -2,7 +2,7 @@
 const {Readable: ReadableStream} = require('stream');
 const {randomBytes} = require('crypto');
 
-module.exports = (options = {}) => {
+const randomBytesReadableStream = (options = {}) => {
 	let producedSize = 0;
 
 	return new ReadableStream({
@@ -30,3 +30,6 @@ module.exports = (options = {}) => {
 		}
 	});
 };
+
+module.exports = randomBytesReadableStream;
+module.exports.default = randomBytesReadableStream;
