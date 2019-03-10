@@ -17,7 +17,7 @@ $ npm install random-bytes-readable-stream
 ```js
 const randomBytesReadableStream = require('random-bytes-readable-stream');
 
-randomBytesReadableStream().pipe(process.stdout);
+randomBytesReadableStream({size: 10}).pipe(process.stdout);
 ```
 
 
@@ -25,7 +25,9 @@ randomBytesReadableStream().pipe(process.stdout);
 
 ### randomBytesReadableStream([options])
 
-Returns a [`stream.Readable`](https://nodejs.org/api/stream.html#stream_readable_streams). By default, it produces infinite data.
+Returns a [`stream.Readable`](https://nodejs.org/api/stream.html#stream_readable_streams).
+
+By default, it produces infinite data.
 
 #### options
 
