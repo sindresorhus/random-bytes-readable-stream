@@ -32,4 +32,5 @@ const randomBytesReadableStream = (options = {}) => {
 };
 
 module.exports = randomBytesReadableStream;
+// TODO: Remove this for the next major release
 module.exports.default = randomBytesReadableStream;
