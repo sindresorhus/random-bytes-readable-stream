@@ -1,4 +1,4 @@
-# random-bytes-readable-stream [![Build Status](https://travis-ci.org/sindresorhus/random-bytes-readable-stream.svg?branch=master)](https://travis-ci.org/sindresorhus/random-bytes-readable-stream)
+# random-bytes-readable-stream
 
 > Creates a [readable stream](https://nodejs.org/api/stream.html#stream_readable_streams) producing cryptographically strong pseudo-random data using [`crypto.randomBytes()`](https://nodejs.org/api/crypto.html#crypto_crypto_randombytes_size_callback)
 
