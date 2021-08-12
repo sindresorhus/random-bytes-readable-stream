@@ -1,6 +1,6 @@
 {
 	"name": "random-bytes-readable-stream",
-	"version": "2.1.0",
+	"version": "3.0.0",
 	"description": "Creates a readable stream producing cryptographically strong pseudo-random data using `crypto.randomBytes()`",
 	"license": "MIT",
 	"repository": "sindresorhus/random-bytes-readable-stream",
