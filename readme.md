@@ -4,26 +4,23 @@
 
 It's like a cross-platform `fs.createReadStream('/dev/urandom')`.
 
-
 ## Install
 
 ```
 $ npm install random-bytes-readable-stream
 ```
 
-
 ## Usage
 
 ```js
-const randomBytesReadableStream = require('random-bytes-readable-stream');
+import randomBytesReadableStream from 'random-bytes-readable-stream';
 
 randomBytesReadableStream({size: 10}).pipe(process.stdout);
 ```
 
-
 ## API
 
-### randomBytesReadableStream([options])
+### randomBytesReadableStream(options?)
 
 Returns a [`stream.Readable`](https://nodejs.org/api/stream.html#stream_readable_streams).
 
@@ -35,12 +32,7 @@ Type: `Object`
 
 ##### size
 
-Type: `number`<br>
+Type: `number`\
 Default: `Infinity`
 
 The total size to be produced by the stream in bytes.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

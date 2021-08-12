@@ -4,13 +4,16 @@
 	"description": "Creates a readable stream producing cryptographically strong pseudo-random data using `crypto.randomBytes()`",
 	"license": "MIT",
 	"repository": "sindresorhus/random-bytes-readable-stream",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -32,10 +35,10 @@
 		"urandom"
 	],
 	"devDependencies": {
-		"@types/node": "^11.13.0",
-		"ava": "^1.4.1",
+		"@types/node": "^16.6.0",
+		"ava": "^3.15.0",
 		"get-stream": "^5.0.0",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"tsd": "^0.17.0",
+		"xo": "^0.44.0"
 	}
 }

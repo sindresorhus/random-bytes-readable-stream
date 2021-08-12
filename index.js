@@ -1,16 +1,15 @@
-'use strict';
-const {Readable: ReadableStream} = require('stream');
-const {randomBytes} = require('crypto');
+import {Readable as ReadableStream} from 'node:stream';
+import {randomBytes} from 'node:crypto';
 
-const randomBytesReadableStream = (options = {}) => {
+export default function randomBytesReadableStream({size = Number.POSITIVE_INFINITY} = {}) {
 	let producedSize = 0;
 
 	return new ReadableStream({
 		read(readSize) {
 			let shouldEnd = false;
 
-			if ((producedSize + readSize) >= options.size) {
-				readSize = options.size - producedSize;
+			if ((producedSize + readSize) >= size) {
+				readSize = size - producedSize;
 				shouldEnd = true;
 			}
 
@@ -27,10 +26,6 @@ const randomBytesReadableStream = (options = {}) => {
 					this.push(null);
 				}
 			});
-		}
+		},
 	});
-};
-
-module.exports = randomBytesReadableStream;
-// TODO: Remove this for the next major release
-module.exports.default = randomBytesReadableStream;
+}

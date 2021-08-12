@@ -1,6 +1,6 @@
 import test from 'ava';
 import getStream from 'get-stream';
-import randomBytesReadableStream from '.';
+import randomBytesReadableStream from './index.js';
 
 test('main', async t => {
 	const stream = randomBytesReadableStream();
